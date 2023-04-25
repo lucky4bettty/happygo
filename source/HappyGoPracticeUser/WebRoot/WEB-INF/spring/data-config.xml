@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="statusOption" class="java.util.LinkedHashMap">
+		<constructor-arg>
+			<map key-type="java.lang.String">
+				<entry key="1" value="啟用"></entry>
+				<entry key="0" value="停用"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	<bean id="targetOption" class="java.util.LinkedHashMap">
+		<constructor-arg>
+			<map key-type="java.lang.String">
+				<entry key="1" value="原視窗開啟"></entry>
+				<entry key="0" value="另開新視窗"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	<bean id="typeOption" class="java.util.LinkedHashMap">
+		<constructor-arg>
+			<map key-type="java.lang.String">
+				<entry key="1" value="次選單"></entry>
+				<entry key="0" value="連結"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	<bean id="iconOption" class="java.util.LinkedHashMap">
+		<constructor-arg>
+			<map key-type="java.lang.String">
+				<entry key="2" value="NEW"></entry>
+				<entry key="1" value="HOT"></entry>
+				<entry key="0" value="無"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	<bean id="adTypeOption" class="java.util.LinkedHashMap">
+		<constructor-arg>
+			<map key-type="java.lang.String">
+				<entry key="1" value="站內活動"></entry>
+				<entry key="0" value="站外連結"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	<bean id="authorizedTypeOption" class="org.springframework.beans.factory.config.MapFactoryBean">
+		<property name="sourceMap">
+			<map>
+				<entry key="HMC01" value="旅遊住宿"></entry>
+				<entry key="HMC04" value="時尚購物"></entry>
+				<entry key="HMC05" value="休閒娛樂"></entry>
+				<entry key="HMC06" value="資訊3C"></entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="shopTypeOption" class="java.util.LinkedHashMap">
+		<constructor-arg>
+			<map key-type="java.lang.String">
+				<entry key="1" value="門市/品牌(自建)"></entry>
+				<entry key="0" value="分公司"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	<bean id="postalCodeCityOption" class="java.util.LinkedHashMap">
+		<constructor-arg>
+			<map key-type="java.lang.String">
+				<entry key="" value="請選擇"></entry>
+				<entry key="基隆市" value="基隆市"></entry>
+				<entry key="臺北市" value="臺北市"></entry>
+				<entry key="新北市" value="新北市"></entry>
+				<entry key="桃園市" value="桃園市"></entry>
+				<entry key="新竹市" value="新竹市"></entry>
+				<entry key="新竹縣" value="新竹縣"></entry>
+				<entry key="苗栗縣" value="苗栗縣"></entry>
+				<entry key="臺中市" value="臺中市"></entry>
+				<entry key="彰化縣" value="彰化縣"></entry>
+				<entry key="南投縣" value="南投縣"></entry>
+				<entry key="雲林縣" value="雲林縣"></entry>
+				<entry key="嘉義市" value="嘉義市"></entry>
+				<entry key="嘉義縣" value="嘉義縣"></entry>
+				<entry key="臺南市" value="臺南市"></entry>
+				<entry key="高雄市" value="高雄市"></entry>
+				<entry key="屏東縣" value="屏東縣"></entry>
+				<entry key="臺東縣" value="臺東縣"></entry>
+				<entry key="花蓮縣" value="花蓮縣"></entry>
+				<entry key="宜蘭縣" value="宜蘭縣"></entry>
+				<entry key="澎湖縣" value="澎湖縣"></entry>
+				<entry key="金門縣" value="金門縣"></entry>
+				<entry key="連江縣" value="連江縣"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="booleanOption" class="org.springframework.beans.factory.config.MapFactoryBean">
+		<property name="sourceMap">
+			<map>
+				<entry key="1" value="是"></entry>
+				<entry key="0" value="否"></entry>
+			</map>
+		</property>
+	</bean>
+	
+</beans>
