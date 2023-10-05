@@ -12,14 +12,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title><c:out value="${projectName}" /></title>
-<link rel="stylesheet" type="text/css" href="<c:out value="${resourcesPath}"/>admin/css/global.css"
+<link rel="stylesheet" type="text/css"
+	href="<c:out value="${resourcesPath}"/>admin/css/global.css"
 	media="all" />
-<script type="text/javascript" src="<c:out value="${resourcesPath}"/>admin/js/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="<c:out value="${resourcesPath}"/>admin/js/common.js"></script>
+<script type="text/javascript"
+	src="<c:out value="${resourcesPath}"/>admin/js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript"
+	src="<c:out value="${resourcesPath}"/>admin/js/common.js"></script>
 <style>
 .red {
 	color: red;
 }
+
 .error {
 	color: red;
 }
@@ -38,36 +42,40 @@
 	<div class="wrapper">
 		<div class="header">
 			<div class="logo">
-				<a href="<c:out value="${contextPath}"/>admin/index.do"><span class="sub">Happy Go 後台管理系統</span></a>
+				<a href="<c:out value="${contextPath}"/>admin/index.do"><span
+					class="sub">Happy Go 後台管理系統</span></a>
 			</div>
 			<ul class="topnav">
 				<li>歡迎&nbsp;<c:out value="${manager.name}" />&nbsp;到訪！
 				</li>
-				<li><a href="#" onclick="location='<c:out value="${contextPath}"/>admin/logout.do';">登出</a></li>
+				<li><a href="#"
+					onclick="location='<c:out value="${contextPath}"/>admin/logout.do';">登出</a></li>
 			</ul>
 		</div>
 		<div class="content type1">
 			<div class="sideMenu">
 				<ul>
 					<c:forEach items="${menuTasks}" var="parent" varStatus="status">
-					  <c:if test="${parent.name != '後臺首頁'}">
-						<li
-							<c:if test="${parent.id eq fn:substring(rightID, 0,3)}">class="on"</c:if>><a
-							href="#"><c:out value="${parent.name}" /></a>
-							<div class="subMenuBlock">
-								<span class="ddicon"></span>
-								<ul class="subMenu">
-									<c:if test="${not empty parent.childs}">
-										<c:forEach items="${parent.childs}" var="child" varStatus="p">
-											<li <c:if test="${child.id eq rightID}">class="on"</c:if>>
-												<c:if test="${not noLink && child.name != '分店維護管理'}">
-													<a href="<spring:url value="${child.url}" context="${contextPath}admin"/>"><c:out value="${child.name}" /></a>
-												</c:if>
-											</li>
-										</c:forEach>
-									</c:if>
-								</ul>
-							</div></li>
+						<c:if test="${parent.name != '後臺首頁'}">
+							<li
+								<c:if test="${parent.id eq fn:substring(rightID, 0,3)}">class="on"</c:if>><a
+								href="#"><c:out value="${parent.name}" /></a>
+								<div class="subMenuBlock">
+									<span class="ddicon"></span>
+									<ul class="subMenu">
+										<c:if test="${not empty parent.childs}">
+											<c:forEach items="${parent.childs}" var="child" varStatus="p">
+												<li <c:if test="${child.id eq rightID}">class="on"</c:if>>
+													<c:if test="${not noLink && child.name != '分店維護管理'}">
+														<a
+															href="<spring:url value="${child.url}" context="${contextPath}admin"/>"><c:out
+																value="${child.name}" /></a>
+													</c:if>
+												</li>
+											</c:forEach>
+										</c:if>
+									</ul>
+								</div></li>
 						</c:if>
 					</c:forEach>
 				</ul>
@@ -75,12 +83,15 @@
 			<decorator:body />
 			<div class="footer">
 				<p>
-					版權所有Copyright © <fmt:formatDate value="${today}" pattern="yyyy" /> All rights reserved.
+					版權所有Copyright ©
+					<fmt:formatDate value="${today}" pattern="yyyy" />
+					All rights reserved.
 				</p>
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="<c:out value="${resourcesPath}"/>admin/js/basic.js"></script>
+	<script type="text/javascript"
+		src="<c:out value="${resourcesPath}"/>admin/js/basic.js"></script>
 </body>
 <script>
 	//計算footer的高度

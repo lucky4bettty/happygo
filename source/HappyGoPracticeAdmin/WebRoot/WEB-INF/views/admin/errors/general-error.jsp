@@ -9,14 +9,14 @@
    "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
-    <head>
-		<meta http-equiv="expires" content="Tue, 20 Aug 1999 01:00:00 GMT"/>
-		<meta http-equiv="Pragma" content="no-cache"/>
-		<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"/>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-        <!-- 系統錯誤! -->
-    </body>
+<head>
+<meta http-equiv="expires" content="Tue, 20 Aug 1999 01:00:00 GMT" />
+<meta http-equiv="Pragma" content="no-cache" />
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+	<!-- 系統錯誤! -->
+</body>
 </html>

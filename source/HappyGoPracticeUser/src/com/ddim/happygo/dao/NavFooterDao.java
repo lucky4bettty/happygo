@@ -13,6 +13,7 @@ import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
+import com.ddim.happygo.model.MenuMain;
 import com.ddim.happygo.model.NavHeader;
 import com.mdbs.jdbc.ClassRowMapperFactory;
 import com.mdbs.jdbc.Page;
@@ -64,6 +65,26 @@ public class NavFooterDao {
 		}
 		sb.append(" ORDER BY SORT DESC");
 		return simpleJdbc.findPage(sb.toString(), args.toArray(), paging, ClassRowMapperFactory.get(NavHeader.class));
+	}
+	
+	
+	
+	/**
+	 * 查詢角色列表
+	 * 
+	 * @param status
+	 * @return
+	 * @throws Exception
+	 */
+	public List<NavHeader> getList(String status) throws Exception {
+		StringBuffer sql = new StringBuffer("SELECT * FROM " + TABLE_NAME + " WHERE ID IS NOT NULL");
+		List<Object> args = new ArrayList<Object>();
+		if (StringUtils.isNotBlank(status)) {
+			sql.append(" AND STATUS = ?");
+			args.add(status);
+		}
+		sql.append(" ORDER BY CREATE_TIME DESC");
+		return simpleJdbc.query(sql.toString(), args.toArray(), ClassRowMapperFactory.get(NavHeader.class));
 	}
 
 	/**

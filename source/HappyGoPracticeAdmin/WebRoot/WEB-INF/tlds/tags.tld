@@ -43,9 +43,9 @@
 		<name>stringBreakToBrTag</name>
 		<tag-class>com.mdbs.web.tag.stringBreakToBrTag</tag-class>
 		<body-content>JSP</body-content>
-<!-- 		<description> -->
-<!--         break to br tag -->
-<!--     </description> -->
+		<!-- <description> -->
+		<!-- break to br tag -->
+		<!-- </description> -->
 	</tag>
 	<tag>
 		<name>convertChineseYear</name>

@@ -41,6 +41,7 @@ public class ManagerService {
 	 * @throws Exception
 	 */
 	public Manager login(String account, String pwd) throws Exception {
+		System.out.println(DigestUtils.md5Hex(pwd));
 		return managerDao.login(account, DigestUtils.md5Hex(pwd));
 	}
 

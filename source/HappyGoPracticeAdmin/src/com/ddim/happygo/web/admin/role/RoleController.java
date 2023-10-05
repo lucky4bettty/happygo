@@ -95,6 +95,7 @@ public class RoleController {
 			setCommonData(request);
 			paging.setPageSize(pageItems);
 			Page<ManagerRole> page = managerRoleService.findPage(form.getName(), form.getStatus(), paging);
+			System.out.println(page);
 			model.addAttribute("page", page);
 			return getPath() + "/list";
 		} catch (Exception e) {

@@ -7,9 +7,9 @@
 		<pattern>/admin/logout.*</pattern>
 		<pattern>/admin/tinymce/*.*</pattern>
 	</excludes>
-	
+
 	<decorator name="admin" page="admin.jsp">
-        <pattern>/admin/**</pattern>
-    </decorator>
-	
+		<pattern>/admin/**</pattern>
+	</decorator>
+
 </decorators>

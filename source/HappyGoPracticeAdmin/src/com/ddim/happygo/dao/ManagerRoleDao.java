@@ -64,6 +64,8 @@ public class ManagerRoleDao {
 			args.add(status);
 		}
 		sb.append(" ORDER BY CREATE_TIME DESC");
+		System.out.println(paging);
+		System.out.println(sb.toString());
 		return simpleJdbc.findPage(sb.toString(), args.toArray(), paging, ClassRowMapperFactory.get(ManagerRole.class));
 	}
 

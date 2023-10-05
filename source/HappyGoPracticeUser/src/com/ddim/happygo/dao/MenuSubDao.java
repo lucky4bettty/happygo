@@ -162,4 +162,22 @@ public class MenuSubDao {
 		Object[] args = { status, modifier, now, id };
 		simpleJdbc.update(sb.toString(), args);
 	}
+	
+	/**
+	 * 查詢角色列表
+	 * 
+	 * @param status
+	 * @return
+	 * @throws Exception
+	 */
+	public List<MenuSub> getList(String status) throws Exception {
+		StringBuffer sql = new StringBuffer("SELECT * FROM " + TABLE_NAME + " WHERE ID IS NOT NULL");
+		List<Object> args = new ArrayList<Object>();
+		if (StringUtils.isNotBlank(status)) {
+			sql.append(" AND STATUS = ?");
+			args.add(status);
+		}
+		sql.append(" ORDER BY CREATE_TIME DESC");
+		return simpleJdbc.query(sql.toString(), args.toArray(), ClassRowMapperFactory.get(MenuSub.class));
+	}
 }

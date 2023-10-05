@@ -42,7 +42,8 @@
 			</map>
 		</constructor-arg>
 	</bean>
-	<bean id="authorizedTypeOption" class="org.springframework.beans.factory.config.MapFactoryBean">
+	<bean id="authorizedTypeOption"
+		class="org.springframework.beans.factory.config.MapFactoryBean">
 		<property name="sourceMap">
 			<map>
 				<entry key="HMC01" value="旅遊住宿"></entry>
@@ -89,8 +90,9 @@
 			</map>
 		</constructor-arg>
 	</bean>
-	
-	<bean id="booleanOption" class="org.springframework.beans.factory.config.MapFactoryBean">
+
+	<bean id="booleanOption"
+		class="org.springframework.beans.factory.config.MapFactoryBean">
 		<property name="sourceMap">
 			<map>
 				<entry key="1" value="是"></entry>
@@ -98,5 +100,5 @@
 			</map>
 		</property>
 	</bean>
-	
+
 </beans>

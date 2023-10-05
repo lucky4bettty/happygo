@@ -2,6 +2,7 @@ package com.ddim.happygo.service;
 
 import java.sql.Timestamp;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import com.ddim.happygo.Constants;
 import com.ddim.happygo.dao.MenuSubDao;
 import com.ddim.happygo.model.MenuMain;
 import com.ddim.happygo.model.MenuSub;
+import com.ddim.happygo.model.NavHeader;
 import com.ddim.happygo.model.News;
 import com.mdbs.jdbc.Page;
 import com.mdbs.jdbc.PagingParameter;
@@ -40,6 +42,17 @@ public class MenuSubService {
 	 */
 	public Page<MenuSub> findPage(String name, String status,String mainMenuId, PagingParameter paging) throws Exception {
 		return menuSubDao.findPage(name, status,mainMenuId , paging);
+	}
+	
+	/**
+	 * 查詢列表
+	 * 
+	 * @param status
+	 * @return
+	 * @throws Exception
+	 */
+	public List<MenuSub> getList(String status) throws Exception {
+		return menuSubDao.getList(status);
 	}
 	
 	/**

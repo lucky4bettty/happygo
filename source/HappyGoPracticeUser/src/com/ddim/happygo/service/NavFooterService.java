@@ -2,6 +2,7 @@ package com.ddim.happygo.service;
 
 import java.sql.Timestamp;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.ddim.happygo.dao.NavFooterDao;
+import com.ddim.happygo.model.MenuMain;
 import com.ddim.happygo.model.NavHeader;
 import com.mdbs.jdbc.Page;
 import com.mdbs.jdbc.PagingParameter;
@@ -39,6 +41,17 @@ public class NavFooterService {
 	 */
 	public Page<NavHeader> findPage(String name, String status, PagingParameter paging) throws Exception {
 		return navHeaderDao.findPage(name, status, paging);
+	}
+	
+	/**
+	 * 查詢列表
+	 * 
+	 * @param status
+	 * @return
+	 * @throws Exception
+	 */
+	public List<NavHeader> getList(String status) throws Exception {
+		return navHeaderDao.getList(status);
 	}
 
 	/**

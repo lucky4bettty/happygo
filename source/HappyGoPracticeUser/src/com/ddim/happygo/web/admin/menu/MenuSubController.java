@@ -83,8 +83,6 @@ public class MenuSubController {
 		request.setAttribute("statusOption", statusOption);
 		request.setAttribute("targetOption", targetOption);
 		request.setAttribute("mainMenuList", menuMainService.getList(Constants.STATUS_ENABLE));
-//		request.setAttribute("imagePath", fileReadUrl + newsPath);
-//		request.setAttribute("countList", newsService.countList());
 	}
 	
 	/**

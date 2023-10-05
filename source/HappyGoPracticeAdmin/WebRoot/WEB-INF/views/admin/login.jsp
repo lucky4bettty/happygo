@@ -1,13 +1,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/views/common/include.jsp"%>
-<%@ page trimDirectiveWhitespaces="true" %>
+<%@ page trimDirectiveWhitespaces="true"%>
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><c:out value="${projectName}" /></title>
-<link href="<c:out value="${resourcesPath}"/>admin/css/global.css" rel="stylesheet" type="text/css" media="all" />
-<script src="<c:out value="${resourcesPath}"/>admin/js/jquery-2.2.0.min.js"></script>
+<link href="<c:out value="${resourcesPath}"/>admin/css/global.css"
+	rel="stylesheet" type="text/css" media="all" />
+<script
+	src="<c:out value="${resourcesPath}"/>admin/js/jquery-2.2.0.min.js"></script>
 
 <script type="text/javascript">
 	$(function() {
@@ -63,7 +65,11 @@
 
 				</div>
 				<div class="footer">
-					<p>版權所有Copyright © <fmt:formatDate value="${today}" pattern="yyyy" /> All rights reserved.</p>
+					<p>
+						版權所有Copyright ©
+						<fmt:formatDate value="${today}" pattern="yyyy" />
+						All rights reserved.
+					</p>
 				</div>
 			</div>
 		</form:form>

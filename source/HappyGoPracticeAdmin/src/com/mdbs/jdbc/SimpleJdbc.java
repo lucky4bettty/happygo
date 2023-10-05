@@ -68,8 +68,6 @@ public class SimpleJdbc {
 				page.setPagesAvailable(1);
 			}
 		}
-		System.out.println("betty");
-		System.out.println(page);
 		return page;
 	}
 
